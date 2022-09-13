@@ -68,9 +68,9 @@ function getResult() {
 }
 
 // Scoreboard
-const winsDisplay = document.getElementById('wins-display');
+/*const winsDisplay = document.getElementById('wins-display');
 const lossesDisplay = document.getElementById('losses-display');
-const drawsDisplay = document.getElementById('draws-display');
+const drawsDisplay = document.getElementById('draws-display'); */
 
 /*function displayScoreboard() {
     winsDisplay.textContent = 
