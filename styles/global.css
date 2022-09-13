@@ -27,6 +27,14 @@ main {
     padding: 20px;
 }
 
+#game {
+    width: 1000px;
+    height: 500px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
 #top {
     background-color: grey;
     color: white;
@@ -37,8 +45,17 @@ main {
 }
 
 #bottom {
-    background-color: darkgray;
+    background-color: white;
     padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+#player-buttons {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
@@ -62,4 +79,31 @@ main {
     height: 40px;
     background-color: blue;
     color: white;
+}
+
+#icon-rock {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-paper {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-scissors {
+    width: 100px;
+    height: 100px;
+}
+
+#scoreboard {
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+#scoreboard-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
