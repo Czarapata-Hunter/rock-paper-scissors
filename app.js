@@ -64,6 +64,17 @@ function getResult() {
     }
     resultDisplay.innerHTML = result;
 }
+
+// Scoreboard
+const winsDisplay = document.getElementById('wins-display');
+const lossesDisplay = document.getElementById('losses-display');
+const drawsDisplay = document.getElementById('draws-display');
+
+function displayScoreboard() {
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+    drawsDisplay.textContent = draws;
+}
 /* Component */
 // get DOM
 // display
