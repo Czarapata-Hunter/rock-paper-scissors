@@ -3,7 +3,9 @@
 /* State */
 
 /* Actions */
-function loadPage() {}
+/*function loadPage() {
+
+}*/
 
 /* Components */
 const playerChoiceDisplay = document.getElementById('player-choice');
@@ -70,15 +72,15 @@ const winsDisplay = document.getElementById('wins-display');
 const lossesDisplay = document.getElementById('losses-display');
 const drawsDisplay = document.getElementById('draws-display');
 
-function displayScoreboard() {
-    winsDisplay.textContent = wins;
-    lossesDisplay.textContent = losses;
-    drawsDisplay.textContent = draws;
-}
+/*function displayScoreboard() {
+    winsDisplay.textContent = 
+    lossesDisplay.textContent = 
+    drawsDisplay.textContent = 
+}*/
 /* Component */
 // get DOM
 // display
 // event listeners
 
 /* Run page load code */
-loadPage();
+/*loadPage();*/
