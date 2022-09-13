@@ -6,10 +6,13 @@
 
 body {
     height: 100vh;
-    font-family: 'Rubik', san-serif;
+    font-family: 'Fantasy', san-serif;
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-color: skyblue;
+    align-content: center;
+    text-align: left;
 }
 
 header {
@@ -22,4 +25,41 @@ header {
 
 main {
     padding: 20px;
+}
+
+#top {
+    background-color: grey;
+    color: white;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#bottom {
+    background-color: darkgray;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#Rock {
+    width: 200px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+}
+
+#Paper {
+    width: 200px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+}
+
+#Scissors {
+    width: 200px;
+    height: 40px;
+    background-color: blue;
+    color: white;
 }
