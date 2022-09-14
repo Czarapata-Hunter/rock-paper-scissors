@@ -3,9 +3,7 @@
 /* State */
 
 /* Actions */
-/*function loadPage() {
-
-}*/
+function loadPage() {}
 
 /* Components */
 const playerChoiceDisplay = document.getElementById('player-choice');
@@ -14,9 +12,26 @@ const resultDisplay = document.getElementById('result');
 
 const possibleChoices = document.querySelectorAll('button');
 
+const winsDisplay = document.getElementById('wins-display');
+const lossesDisplay = document.getElementById('losses-display');
+const drawsDisplay = document.getElementById('draws-display');
+//const totalDisplay = document.getElementById('games-total');
+
+function displayScoreboard() {
+    winsDisplay.textContent = userWins;
+    lossesDisplay.textContent = userLosses;
+    drawsDisplay.textContent = draws;
+    //totalDisplay.textContent = total;
+}
+
 let userChoice;
 let computerChoice;
 let result;
+
+let userWins = 0;
+let userLosses = 0;
+let draws = 0;
+//let total = draws + userWins + userLosses;
 
 possibleChoices.forEach((possibleChoice) =>
     possibleChoice.addEventListener('click', (e) => {
@@ -45,24 +60,38 @@ function generateComputerChoice() {
 function getResult() {
     if (computerChoice === userChoice) {
         result = 'Draw!';
+        displayScoreboard();
+        draws++;
     }
     if (computerChoice === 'Rock' && userChoice === 'Paper') {
         result = 'Winner!';
+        displayScoreboard();
+        userWins++;
     }
     if (computerChoice === 'Rock' && userChoice === 'Scissors') {
         result = 'Loser!';
+        displayScoreboard();
+        userLosses++;
     }
     if (computerChoice === 'Paper' && userChoice === 'Rock') {
         result = 'Loser!';
+        displayScoreboard();
+        userLosses++;
     }
     if (computerChoice === 'Paper' && userChoice === 'Scissors') {
         result = 'Winner!';
+        displayScoreboard();
+        userWins++;
     }
     if (computerChoice === 'Scissors' && userChoice === 'Paper') {
         result = 'Loser!';
+        displayScoreboard();
+        userLosses++;
     }
-    if (computerChoice === 'Scissors' && userChoice === 'Rocok') {
+    if (computerChoice === 'Scissors' && userChoice === 'Rock') {
         result = 'Winner!';
+        displayScoreboard();
+        userWins++;
     }
     resultDisplay.innerHTML = result;
 }
@@ -83,4 +112,4 @@ const drawsDisplay = document.getElementById('draws-display'); */
 // event listeners
 
 /* Run page load code */
-/*loadPage();*/
+loadPage();
