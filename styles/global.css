@@ -6,10 +6,13 @@
 
 body {
     height: 100vh;
-    font-family: 'Rubik', san-serif;
+    font-family: 'Fantasy', san-serif;
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-color: skyblue;
+    align-content: center;
+    text-align: left;
 }
 
 header {
@@ -22,4 +25,118 @@ header {
 
 main {
     padding: 20px;
+}
+
+#game {
+    width: 1000px;
+    height: auto;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#top {
+    background-color: grey;
+    color: white;
+    letter-spacing: 2px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#bottom {
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    column-gap: 10px;
+}
+
+#player-buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#Rock {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(51, 155, 111);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Paper {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(51, 155, 111);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#Scissors {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(51, 155, 111);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#icon-rock {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-paper {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-scissors {
+    width: 100px;
+    height: 100px;
+}
+
+#play-again {
+    height: 40px;
+    width: 100px;
+}
+
+#scoreboard {
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: darkgray;
+    border-radius: 20px;
+}
+
+#scoreboard-header {
+    background-color: grey;
+    color: darkgreen;
+    border-top: 2px;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+#scoreboard-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }

@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/global.css" />
-</head>
+    <body>
+        <header>
+            <img src="/assets/html_css_js.png" />
+            <h1>Rock Paper Scissors</h1>
+        </header>
 
-<body>
-    <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <div id="game">
+                <div id="top">
+                    <h3>Player Choice: <span id="player-choice"></span></h3>
+                    <h3>Computer Choice: <span id="computer-choice"></span></h3>
+                    <h3>Result: <span id="result"></span></h3>
+                </div>
+                <div id="bottom">
+                    <div id="player-buttons">
+                        <button id="Rock" class="choice">Rock</button>
+                        <button id="Paper" class="choice">Paper</button>
+                        <button id="Scissors" class="choice">Scissors</button>
+                    </div>
+                    <div id="images">
+                        <img id="icon-rock" src="/assets/rock.png" alt="Rock Image" />
+                        <img id="icon-paper" src="/assets/Paper.png" alt="Paper Image" />
+                        <img id="icon-scissors" src="/assets/Scissors.png" alt="Scissors Image" />
+                    </div>
+                    <section id="scoreboard">
+                        <h2 id="scoreboard-header">ScoreBoard</h2>
+                        <div id="scoreboard-results">
+                            <h3>Wins: <span id="wins-display"></span></h3>
+                            <h3>Losses: <span id="losses-display"></span></h3>
+                            <h3>Draws: <span id="draws-display"></span></h3>
+                            <h3>Games: <span id="games-display"></span></h3>
+                        </div>
+                    </section>
+                </div>
+                <button id="play-again-button">Play Again</button>
+            </div>
+        </main>
+    </body>
 </html>
