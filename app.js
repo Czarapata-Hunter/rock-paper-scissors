@@ -10,18 +10,18 @@ const playerChoiceDisplay = document.getElementById('player-choice');
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const resultDisplay = document.getElementById('result');
 
-const possibleChoices = document.querySelectorAll('button');
-
+const possibleChoices = document.querySelectorAll('button.choice');
 const winsDisplay = document.getElementById('wins-display');
 const lossesDisplay = document.getElementById('losses-display');
 const drawsDisplay = document.getElementById('draws-display');
-//const totalDisplay = document.getElementById('games-total');
+const playAgainButton = document.getElementById('play-again-button');
+const gamesDisplay = document.getElementById('games-display');
 
 function displayScoreboard() {
     winsDisplay.textContent = userWins;
     lossesDisplay.textContent = userLosses;
     drawsDisplay.textContent = draws;
-    //totalDisplay.textContent = total;
+    gamesDisplay.textContent = total;
 }
 
 let userChoice;
@@ -31,19 +31,20 @@ let result;
 let userWins = 0;
 let userLosses = 0;
 let draws = 0;
-//let total = draws + userWins + userLosses;
+let total = draws + userWins + userLosses;
 
 possibleChoices.forEach((possibleChoice) =>
     possibleChoice.addEventListener('click', (e) => {
         userChoice = e.target.id;
-        playerChoiceDisplay.innerHTML = userChoice;
+        playerChoiceDisplay.textContent = userChoice;
+        console.log(userChoice);
         generateComputerChoice();
         getResult();
     })
 );
 
 function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1;
+    const randomNumber = Math.ceil(Math.random() * possibleChoices.length);
 
     if (randomNumber === 1) {
         computerChoice = 'Rock';
@@ -60,38 +61,38 @@ function generateComputerChoice() {
 function getResult() {
     if (computerChoice === userChoice) {
         result = 'Draw!';
-        displayScoreboard();
         draws++;
+        displayScoreboard();
     }
     if (computerChoice === 'Rock' && userChoice === 'Paper') {
         result = 'Winner!';
-        displayScoreboard();
         userWins++;
+        displayScoreboard();
     }
     if (computerChoice === 'Rock' && userChoice === 'Scissors') {
         result = 'Loser!';
-        displayScoreboard();
         userLosses++;
+        displayScoreboard();
     }
     if (computerChoice === 'Paper' && userChoice === 'Rock') {
         result = 'Loser!';
-        displayScoreboard();
         userLosses++;
+        displayScoreboard();
     }
     if (computerChoice === 'Paper' && userChoice === 'Scissors') {
         result = 'Winner!';
-        displayScoreboard();
         userWins++;
+        displayScoreboard();
     }
     if (computerChoice === 'Scissors' && userChoice === 'Paper') {
         result = 'Loser!';
-        displayScoreboard();
         userLosses++;
+        displayScoreboard();
     }
     if (computerChoice === 'Scissors' && userChoice === 'Rock') {
         result = 'Winner!';
-        displayScoreboard();
         userWins++;
+        displayScoreboard();
     }
     resultDisplay.innerHTML = result;
 }
